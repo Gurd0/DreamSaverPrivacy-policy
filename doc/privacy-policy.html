@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – DreamSaver</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #0f0f0f;
+      color: #e0e0e0;
+      line-height: 1.7;
+      padding: 2rem 1rem 4rem;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 0 2.5rem;
+      border-bottom: 1px solid #2a2a2a;
+      margin-bottom: 2.5rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin: 2.2rem 0 0.75rem;
+      padding-left: 0.75rem;
+      border-left: 3px solid #4a9eff;
+    }
+
+    p {
+      margin-bottom: 0.75rem;
+      color: #ccc;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 0.75rem;
+    }
+
+    ul li {
+      position: relative;
+      padding-left: 1.4rem;
+      margin-bottom: 0.4rem;
+      color: #ccc;
+    }
+
+    ul li::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      color: #4a9eff;
+    }
+
+    .highlight-box {
+      background: #1a2a1a;
+      border: 1px solid #2d5a2d;
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .highlight-box p {
+      margin: 0;
+      color: #a8d5a8;
+      font-weight: 500;
+    }
+
+    .permission-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    .permission-table th {
+      text-align: left;
+      padding: 0.6rem 0.8rem;
+      background: #1e1e1e;
+      color: #fff;
+      border-bottom: 2px solid #2a2a2a;
+    }
+
+    .permission-table td {
+      padding: 0.6rem 0.8rem;
+      border-bottom: 1px solid #1e1e1e;
+      color: #ccc;
+      vertical-align: top;
+    }
+
+    .permission-table tr:hover td {
+      background: #181818;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.15rem 0.55rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .badge-local { background: #1a3a1a; color: #6dcd6d; }
+    .badge-required { background: #3a2a10; color: #e8a84e; }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid #2a2a2a;
+      color: #555;
+      font-size: 0.82rem;
+    }
+
+    a { color: #4a9eff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    @media (max-width: 480px) {
+      header h1 { font-size: 1.5rem; }
+      .permission-table { font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <h1>Privacy Policy</h1>
+      <p>DreamSaver &nbsp;·&nbsp; Last updated: March 11, 2026</p>
+    </header>
+
+    <div class="highlight-box">
+      <p>
+        DreamSaver does not collect, store, or transmit any personal data.
+        Everything the app accesses stays entirely on your device.
+      </p>
+    </div>
+
+    <h2>1. Overview</h2>
+    <p>
+      DreamSaver is an Android screensaver (DreamService) that displays a customisable
+      clock, media player info, battery status, calendar, and a personal photo/video
+      gallery while your device is charging. The app has <strong>no internet
+      permission</strong> and makes no network connections of any kind.
+    </p>
+
+    <h2>2. Data We Access – and Why</h2>
+    <p>
+      The app reads certain on-device data solely to render the screensaver display.
+      None of this information leaves your device.
+    </p>
+
+    <table class="permission-table">
+      <thead>
+        <tr>
+          <th>Data / Permission</th>
+          <th>Purpose</th>
+          <th>Stored?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Current time &amp; date</strong></td>
+          <td>Displayed by the clock widget</td>
+          <td><span class="badge badge-local">Never</span></td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Media session info</strong><br />
+            <small>(track title, artist, album art)</small>
+          </td>
+          <td>
+            Read via Android's <code>MediaSessionManager</code> and shown in the
+            media widget. Requires the Notification Listener permission — however,
+            the app's <code>NotificationListenerService</code> reads
+            <em>no notification content</em>; it is only registered to satisfy
+            Android's API requirement for accessing media sessions.
+          </td>
+          <td><span class="badge badge-local">Never</span></td>
+        </tr>
+        <tr>
+          <td><strong>Battery level &amp; charge status</strong></td>
+          <td>Displayed by the battery widget via a system broadcast</td>
+          <td><span class="badge badge-local">Never</span></td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Photos &amp; videos</strong><br />
+            <small>(user-selected gallery files)</small>
+          </td>
+          <td>
+            Files you explicitly pick in the configuration screen are displayed as
+            screensaver backgrounds. Only the URI references you choose are saved
+            in the app's local SharedPreferences.
+          </td>
+          <td><span class="badge badge-local">Local only</span></td>
+        </tr>
+        <tr>
+          <td>
+            <strong>System settings</strong><br />
+            <small>(<code>screensaver_component</code>,
+            <code>enabled_notification_listeners</code>)</small>
+          </td>
+          <td>
+            Read-only check during onboarding to show whether setup is complete
+          </td>
+          <td><span class="badge badge-local">Never</span></td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Boot &amp; power-connected events</strong><br />
+            <small>(<code>BOOT_COMPLETED</code>,
+            <code>ACTION_POWER_CONNECTED</code>)</small>
+          </td>
+          <td>
+            Used to prompt first-time setup (opens the system Dream Settings
+            screen) if the app has not yet been configured as the default
+            screensaver
+          </td>
+          <td><span class="badge badge-local">Never</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>3. App Permissions Explained</h2>
+    <ul>
+      <li>
+        <strong>FOREGROUND_SERVICE</strong> — required by the Android system for
+        services that run while the screen is on.
+      </li>
+      <li>
+        <strong>RECEIVE_BOOT_COMPLETED</strong> — allows the app to show a
+        first-time setup reminder after a device restart.
+      </li>
+      <li>
+        <strong>WAKE_LOCK</strong> — keeps the screen on during the screensaver
+        session.
+      </li>
+      <li>
+        <strong>MEDIA_CONTENT_CONTROL / Notification Listener</strong> — required
+        by Android to read which media session is currently active. No notification
+        content is read or stored.
+      </li>
+    </ul>
+
+    <h2>4. No Data Collection or Sharing</h2>
+    <p>
+      DreamSaver does not include any analytics, advertising, crash-reporting, or
+      third-party SDKs. No data is shared with us or any third party. We have no
+      servers, accounts, or sign-in flows.
+    </p>
+
+    <h2>5. Local Storage</h2>
+    <p>
+      The only persistent storage the app uses is Android's
+      <code>SharedPreferences</code>, stored locally on your device. It holds your
+      configuration choices (widget layout, colour theme, font, and the URIs of
+      any gallery files you selected). This data never leaves your device and is
+      deleted automatically when you uninstall the app.
+    </p>
+
+    <h2>6. Children's Privacy</h2>
+    <p>
+      DreamSaver does not collect any data from anyone, including children under
+      the age of 13. The app is safe for use by all age groups.
+    </p>
+
+    <h2>7. Changes to This Policy</h2>
+    <p>
+      If we update this privacy policy, we will revise the "Last updated" date at
+      the top of this page. Continued use of the app after any changes constitutes
+      acceptance of the updated policy.
+    </p>
+
+    <h2>8. Contact</h2>
+    <p>
+      If you have questions about this privacy policy, please open an issue on the
+      project's GitHub repository or contact the developer directly through
+      Google Play.
+    </p>
+
+    <footer>
+      <p>DreamSaver &nbsp;·&nbsp; Privacy Policy &nbsp;·&nbsp; &copy; 2026</p>
+    </footer>
+
+  </div>
+</body>
+</html>
